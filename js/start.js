@@ -5,6 +5,10 @@ function addAnswer(answerTest, qIdx){
   var a = document.querySelector('.answerBox');
   var answer = document.createElement('button');
   answer.classList.add('answerList');
+  answer.classList.add('my-3');
+  answer.classList.add('py-3');
+  answer.classList.add('mx-auto');
+  answer.classList.add('fadeIn');
   a.appendChild(answer);
   answer.innerHTML = answerTest;
 
@@ -12,9 +16,16 @@ function addAnswer(answerTest, qIdx){
     var children = document.querySelectorAll('.answerList');
     for (let i = 0; i<children.length; i++){
       children[i].disabled = true;
-      children[i].style.display = 'none';
+      children[i].style.WebkitAnimation = "fadeOut 1s";
+      children[i].style.animation = "fadeOut 1s";
     }
-    goNext(++qIdx);
+    setTimeout(() => {
+      for(let i = 0; i < children.length; i++){
+        children[i].style.display = 'none';
+      }
+      goNext(++qIdx);
+    },950)
+
   }, false);
 }
 
