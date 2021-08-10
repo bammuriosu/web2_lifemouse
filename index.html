@@ -13,11 +13,12 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/qna.css">
   <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/result.css">
 </head>
 
 <body>
   <div class="container">
-  <section id="main" class="mx-auto mt-5 py-4 px-3">
+  <section id="main" class="mx-auto my-5 py-4 px-3">
       <h2>나만의 인생마우스 찾기</h2>
       <div class="col-lg-10 col-md-11 col-sm-12 col-12 mx-auto">
       <img src="./img/main.png" alt="mainImage" class="img-fluid my-5">
@@ -29,6 +30,11 @@
       <button type="button" class="btn btn-outline-primary mt-3" onclick="js:begin()">시작하기</button>
     </section>
     <section id="qna">
+      <div class="status mx-auto mt-5">
+        <div class="statusBar">
+
+        </div>
+      </div>
       <div class="qBox my-5 py-3 mx-auto">
 
       </div>
@@ -37,7 +43,17 @@
       </div>
     </section>
     <section id="result">
+      <h2>당신의 인생마우스는 바로?!</h2>
+      <div class="resultname">
 
+      </div>
+      <div id="resultImg" class="col-lg-10 col-md-11 col-sm-12 col-12 mx-auto">
+      <img src="./img/main.png" alt="mainImage" class="img-fluid my-5">
+      </div>
+      <div class="resultDesc">
+
+      </div>
+      <button type="button" class="btn btn-outline-primary mt-3" onclick="js:begin()">공유하기</button>
     </section>
     <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>
